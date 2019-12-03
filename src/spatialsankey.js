@@ -190,7 +190,7 @@ export default function() {
     // Range of node circles (set min and max equal for constant circle size)
     var node_radius_range = {min: 10, max: 20};
     // Range for color coding according to flow size (set colors for single coloring)
-    node_color_range = ["yellow", "red"];
+    var node_color_range = ["yellow", "red"];
     // Customize link styles using options
     if(options){
       if(options.minradius) node_radius_range.min = options.minradius;
@@ -209,12 +209,12 @@ export default function() {
 
     // Node object properties
     node.cx = function(d) {
-      cx = map.latLngToLayerPoint(d.geometry.coordinates).x;
+      var cx = map.latLngToLayerPoint(d.geometry.coordinates).x;
       if(!cx) return null;
       return cx;
     };
     node.cy = function(d) {
-      cy = map.latLngToLayerPoint(d.geometry.coordinates).y;
+      var cy = map.latLngToLayerPoint(d.geometry.coordinates).y;
       if(!cy) return null;
       return cy;
     };
