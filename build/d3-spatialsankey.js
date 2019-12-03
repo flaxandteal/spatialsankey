@@ -4,7 +4,7 @@
   (factory((global.d3 = global.d3 || {}),global.d3Base,global.d3));
 }(this, function (exports,d3Base,d3Scale) { 'use strict';
 
-  const d3 = Object.assign(d3Base, { scale: d3Scale.scale })
+  const d3 = Object.assign(d3Base, { scaleLinear: d3Scale.scaleLinear })
 
   function spatialsankey() {
     // Define control variables
@@ -206,7 +206,7 @@
       }
 
       // Instantiate color scale function after checking options
-      var color = d3.scale.linear()
+      var color = d3.scaleLinear()
                     .domain([0, 1])
                     .range(node_color_range);
 

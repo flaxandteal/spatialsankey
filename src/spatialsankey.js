@@ -1,6 +1,6 @@
 import * as d3Base from "d3"
-import { scale } from "d3-scale"
-const d3 = Object.assign(d3Base, { scale })
+import { scaleLinear } from "d3-scale"
+const d3 = Object.assign(d3Base, { scaleLinear })
 
 export default function() {
   // Define control variables
@@ -202,7 +202,7 @@ export default function() {
     }
 
     // Instantiate color scale function after checking options
-    var color = d3.scale.linear()
+    var color = d3.scaleLinear()
                   .domain([0, 1])
                   .range(node_color_range);
 
