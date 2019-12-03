@@ -1,6 +1,6 @@
 {
   "name": "d3-spatialsankey",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Geodesign's Leaflet-based Sankey diagram for geospatial data",
   "main": "build/d3-spatialsankey.js",
   "jsnext:main": "index",
