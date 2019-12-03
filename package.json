@@ -8,12 +8,13 @@
     "d3": "^5.14.2",
     "rollup": "0.27",
     "tape": "4",
-    "uglify-js": "2"
+    "uglify-js": "2",
+    "d3-scale": "3"
   },
   "devDependencies": {},
   "scripts": {
     "test": "tape 'test/**/*-test.js'",
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-spatialsankey.js -- index.js",
+    "pretest": "rm -rf build && mkdir build && rollup -g d3-scale:d3 -f umd -n d3 -o build/d3-spatialsankey.js -- index.js",
     "prepublish": "npm run test && uglifyjs build/d3-spatialsankey.js -c -m -o build/d3-spatialsankey.min.js",
     "postpublish": "zip -j build/d3-spatialsankey.zip -- LICENSE README.md build/d3-spatialsankey.js build/d3-spatialsankey.min.js"
   },
