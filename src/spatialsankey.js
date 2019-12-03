@@ -1,6 +1,5 @@
 import * as d3Base from "d3"
 import { scaleLinear } from "d3-scale"
-const d3 = Object.assign(d3Base, { scaleLinear })
 
 export default function() {
   // Define control variables
