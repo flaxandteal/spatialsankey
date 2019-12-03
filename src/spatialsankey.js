@@ -1,5 +1,4 @@
 import * as d3 from "d3"
-import { scaleLinear } from "d3-scale"
 
 export default function() {
   // Define control variables
