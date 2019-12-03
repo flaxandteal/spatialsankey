@@ -1,14 +1,21 @@
 {
-  "name": "spatialsankey",
+  "name": "d3-spatialsankey",
   "version": "0.1.0",
   "description": "Geodesign's Leaflet-based Sankey diagram for geospatial data",
-  "main": "spatialsankey.js",
+  "main": "build/d3-spatialsankey.js",
+  "jsnext:main": "index",
   "dependencies": {
-    "d3": "^5.14.2"
+    "d3": "^5.14.2",
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape 'test/**/*-test.js'",
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-spatialsankey.js -- index.js",
+    "prepublish": "npm run test && uglifyjs build/d3-spatialsankey.js -c -m -o build/d3-spatialsankey.min.js",
+    "postpublish": "zip -j build/d3-spatialsankey.zip -- LICENSE README.md build/d3-spatialsankey.js build/d3-spatialsankey.min.js"
   },
   "repository": {
     "type": "git",

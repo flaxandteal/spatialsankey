@@ -1,6 +1,4 @@
-(function() {
-
-d3.spatialsankey = function() {
+export default function() {
   // Define control variables
   var spatialsankey = {},
       map,
@@ -240,5 +238,3 @@ d3.spatialsankey = function() {
 
   return spatialsankey;
 };
-
-})();
