@@ -1,0 +1,27 @@
+{
+  "name": "spatialsankey",
+  "version": "0.1.0",
+  "description": "Geodesign's Leaflet-based Sankey diagram for geospatial data",
+  "main": "spatialsankey.js",
+  "dependencies": {
+    "d3": "^5.14.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaxandteal/spatialsankey.git"
+  },
+  "keywords": [
+    "spatial",
+    "sankey"
+  ],
+  "author": "geodesign (npm: flaxandteal)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaxandteal/spatialsankey/issues"
+  },
+  "homepage": "https://github.com/flaxandteal/spatialsankey#readme"
+}
