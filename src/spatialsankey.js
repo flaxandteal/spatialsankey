@@ -1,4 +1,6 @@
-import * as d3 from "d3"
+import * as d3Base from "d3"
+import { scale } from "d3-scale"
+const d3 = Object.assign(d3Base, { scale })
 
 export default function() {
   // Define control variables

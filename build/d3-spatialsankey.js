@@ -1,8 +1,10 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'd3'], factory) :
-  (factory((global.d3 = global.d3 || {}),global.d3));
-}(this, function (exports,d3) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3'), require('d3-scale')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'd3', 'd3-scale'], factory) :
+  (factory((global.d3 = global.d3 || {}),global.d3Base,global.d3));
+}(this, function (exports,d3Base,d3Scale) { 'use strict';
+
+  const d3 = Object.assign(d3Base, { scale: d3Scale.scale })
 
   function spatialsankey() {
     // Define control variables
